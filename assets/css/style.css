@@ -1,0 +1,39 @@
+body{
+	background-image: url(https://www.ballinabeachvillage.com.au/wp-content/uploads/2012/02/gradient_bg.png);
+}
+
+.jumbotron{
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGpQvphhja_6f8f7LpfVnG2cPYFYe3H59EAaITGV_GA6wb46t4WA);
+	margin-top: 10px;
+	border-style: solid;
+	border-color: red;
+	border-radius: 20px;
+	align-items: center;
+}
+
+
+
+strong{
+	color: red;
+}
+
+th{
+	color: yellow;
+}
+
+.panel-heading {
+    
+    color: white;
+}
+#full-member-list{
+	color: white;
+}
+
+#addTrainBtn {
+    background-color: white;
+    color: white;
+    border: none;
+}
+label{
+	color: yellow;
+}
