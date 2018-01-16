@@ -24,12 +24,12 @@ $('#newTrainBtn').on("click", function(){
   //Grabs user input
   var train = $("#trainInput1").val().trim();
   var place = $("#placeInput1").val().trim();
-  var arrival = $("#arrivalInput1").val().trim();
+  var depart = $("#DepartureInput1").val().trim();
   // Create object for holding train data
   var newTrain = {
         train: train,
         place: place,
-        arrival: arrival
+        depart: depart
   }
 
   
@@ -40,12 +40,12 @@ $('#newTrainBtn').on("click", function(){
   console.log(newTrain.train);
   console.log(newTrain.place);
   console.log(newTrain.next);
-  console.log(newTrain.arrival);
+  console.log(newTrain.depart);
 
   // Clears all of the text-boxes
   $('#trainInput1').val("");
   $('#placeInput1').val("");
-  $('#arrivalInput1').val("");
+  $('#DepartureInput1').val("");
 
 
 });
@@ -59,19 +59,19 @@ database.ref().on("child_added", function(childSnapshot){
   $("#full-member-list").append("<div class='well'><span id='train'> " + childSnapshot.val().train +
         " </span><span id='place'> " + childSnapshot.val().place +
         " </span><span id='next'> " + childSnapshot.val().next+
-        " </span><span id='arrival'> " + childSnapshot.val().arrival + " </span></div>");
+        " </span><span id='depart'> " + childSnapshot.val().depart + " </span></div>");
 
 
 
   // Store everything into a variable
   var train = childSnapshot.val().train;
   var place = childSnapshot.val().place;
-  var arrival = childSnapshot.val().arrival;
+  var depart = childSnapshot.val().depart;
 
   
 
        
-  $("#trainTable > tbody").append("<tr><td>" + train + "</td><td>" + place  + "</td><td>" + arrival + "</td><td>");
+  $("#trainTable > tbody").append("<tr><td>" + train + "</td><td>" + place  + "</td><td>" + depart + "</td><td>");
 
 }, function(errorObject) {
             console.log("Errors handled: " + errorObject.code);
