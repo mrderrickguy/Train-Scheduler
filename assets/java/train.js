@@ -56,10 +56,10 @@ database.ref().on("child_added", function(childSnapshot){
   console.log(childSnapshot.val());
 
 
-  $("#full-member-list").append("<div class='well'><span id='train'> " + childSnapshot.val().train +
-        " </span><span id='place'> " + childSnapshot.val().place +
-        " </span><span id='next'> " + childSnapshot.val().next+
-        " </span><span id='depart'> " + childSnapshot.val().depart + " </span></div>");
+  $("#full-member-list").hide("<div class='well'><span id='train'> " + childSnapshot.val().train +
+        " </span><span id=''> " + childSnapshot.val().place +
+        " </span><span id=''> " + childSnapshot.val().next+
+        " </span><span id=''> " + childSnapshot.val().depart + " </span></div>");
 
 
 
