@@ -58,7 +58,7 @@ database.ref().on("child_added", function(childSnapshot){
 
   $("#full-member-list").hide("<div class='well'><span id='train'> " + childSnapshot.val().train +
         " </span><span id=''> " + childSnapshot.val().place +
-        " </span><span id=''> " + childSnapshot.val().next+
+      
         " </span><span id=''> " + childSnapshot.val().depart + " </span></div>");
 
 
